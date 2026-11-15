@@ -59,14 +59,14 @@ c) test 3: [-0.4, 0.0, 0.75], [-0.4, 0.191, 0.65] #
 
 
 **********************************************************************************************
-Projeto final do semestre (Preensão método analítico)
+Final project of the semester (Analytical grasping method)
 
-a) Abrir o Gazebo junto com o Moveit/Rviz "COM a garra" e a câmera intel Realsense d435
+a) Open Gazebo together with MoveIt/RViz with the gripper and the Intel RealSense D435 camera 
  roslaunch trajectory_pkg spawn_ur5_gripper_cam.launch
 
-b)Para visualizar a imagem da câmera
+b)To visualize the camera image 
  rosrun image_view image_view image:=/camera/color/image_raw
-ou
+or
  rqt_image_view
 
 c) Lançar os blocos e caixas no mundo
