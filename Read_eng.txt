@@ -42,16 +42,16 @@ l) Remove obstacles in MoveIt
 
 *************************************************************************************
 
-Distância dos obstáculos:
-Obs: No script " spawn_spheres.py" para inserir os obstáculos é necessário adicionar a elevação do robô "1.015 m"
-     Nos scripts de cpa pode-se colocar da forma que está anotado abaixo.
+Distance from obstacles:
+Note: In the script "spawn_spheres.py", to insert the obstacles, it is necessary to add the robot elevation "1.015 m". 
+     In the cpa scripts, it can be set as shown below..
 
-1 - Para goal position: [-0.488, 0.191, 0.510]
-a) teste 1: [-0.2, -0.1915, 0.75], [-0.3, 0.191, 0.65]
-b) teste 2: [-0.2, 0.0, 0.75], [-0.2, 0.191, 0.65] # Para estes obstáculos o robô não conseguiu passar os obstáculos
-c) teste 3: [-0.4, 0.0, 0.75], [-0.4, 0.191, 0.65] #
+1 - For goal position: [-0.488, 0.191, 0.510]
+a) test 1: [-0.2, -0.1915, 0.75], [-0.3, 0.191, 0.65]
+b) test 2: [-0.2, 0.0, 0.75], [-0.2, 0.191, 0.65] # Para estes obstáculos o robô não conseguiu passar os obstáculos
+c) test 3: [-0.4, 0.0, 0.75], [-0.4, 0.191, 0.65] #
 
-2 - Para goal position: [-0.488, 0.191, 0.510]
+2 - For goal position: [-0.488, 0.191, 0.510]
 
 
 
