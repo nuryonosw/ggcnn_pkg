@@ -92,45 +92,45 @@ h) Grasping position
 
 Prenssão utilizando ggcnn e imagem de profundidade
 
-a) Abrir o Gazebo junto com o Moveit/Rviz "COM a garra" e a câmera intel Realsense d435
+a) Open Gazebo together with MoveIt/RViz with the gripper and the Intel RealSense D435 camera
  roslaunch ggcnn_pkg spawn_ur5_gripper_cam.launch
 
-b)Para visualizar a imagem da câmera
+b)o visualize the camera image
  rosrun image_view image_view image:=/camera/color/image_raw
-ou
+or
  rqt_image_view
 
-c) Lançar os objetos no mundo
+c) Drop the objects into the world 
 rosrun ggcnn_pkg spawn_objects.py
 
-d) Ler a pose no espaço cartesiano
+d) Read the pose in Cartesian space
  rosrun tf tf_echo base_link tool0
 
-e) Ler a variável das juntas, velocidade e força
+e) Read the joint variables, speed, and force 
  rostopic echo /ur5/joint_states
 
-f) Posicionar o robô na posição inicial
+f) Position the robot in the initial position
  rosrun ggcnn_pkg init_position.py
 
-g) Posição de preensão
+g) Grasping position
  rosrun ggcnn_pkg position_grip.py
 
-h) Iniciar a tarefa de rodar o ggcnn + rodar a preensão robótica (tudo junto)
+h)  Start the task to run GG-CNN + robotic grasping (everything together) 
  rosrun ggcnn_pkg grasp_node.py
 
-i) Nó para rodar somente a rede ggcnn
+i) Node to run only the GG-CNN networ
  rosrun ggcnn_pkg ggcnn_node.py
 
-j) Nó para rodar somente a preensão robótica
+j) Node to run only the robotic grasping
  rosrun ggcnn_pkg grasp_execution_node.py
 
-k) Lançar frames estáticos no RViz
+k) Launch static frames in RViz 
  rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 base_link point_1  # x y z Roll Pitch Yaw
 
-l) Visualizar a imagem da câmera
+l) Visualize the camera image
 rqt_image_view /ggcnn/grasp_visual
 
-PARA SIMULAÇÃO COMPLETA:
+FOR COMPLETE SIMULATION:
 roslaunch ggcnn_pkg spawn_ur5_gripper_cam.launch
 rosrun ggcnn_pkg spawn_objects.py
 rosrun image_view image_view image:=/camera/color/image_raw
