@@ -1,6 +1,5 @@
 Manual for simulation (Artificial Potential Fields)
 
-
 a1) Open Gazebo together with MoveIt/RViz without the gripper "SEM a garra"
 --> roslaunch trajectory_pkg spawn_ur5_eff_controller.launch
 
@@ -10,7 +9,7 @@ a2) Open Gazebo together with MoveIt/RViz with the gripper "COM a garra"
 a3) Open Gazebo together with MoveIt/RViz with the gripper and the Intel RealSense D435 camera
 --> roslaunch trajectory_pkg spawn_ur5_gripper_cam.launch
 
-b) osition the robot in the initial position 
+b) Position the robot in the initial position 
 --> rosrun trajectory_pkg pos_initial.py
 
 c) Insert obstacles into Gazebo
@@ -69,22 +68,22 @@ b)To visualize the camera image
 or
  rqt_image_view
 
-c) Lançar os blocos e caixas no mundo
+c) Drop the blocks and boxes into the world
  rosrun trajectory_pkg spawn_objects_model.py
 
-d) Ler a pose no espaço cartesiano
+d) Read the pose in Cartesian space
  rosrun tf tf_echo base_link tool0
 
-e) Ler a variável das juntas, velocidade e força
+e) Read the joint variables, speed, and force
  rostopic echo /ur5/joint_states
 
-f) Iniciar tarefa de pegar blocos
+f) Start the grasping task
  rosrun trajectory_pkg grasp_main.py
 
-g) Posicionar o robô na posição inicial
+g) Position the robot in the initial position
  rosrun trajectory_pkg init_position.py
 
-h) Posição de preensão
+h) Grasping position
  rosrun trajectory_pkg position_grip.py
 
 
