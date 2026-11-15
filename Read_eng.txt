@@ -7,37 +7,37 @@ a1) Open Gazebo together with MoveIt/RViz without the gripper "SEM a garra"
 a2) Open Gazebo together with MoveIt/RViz with the gripper "COM a garra"
 --> roslaunch trajectory_pkg spawn_ur5_gripper.launch
 
-a3) Abrir o Gazebo junto com o Moveit/Rviz "COM a garra" e a câmera intel Realsense d435
+a3) Open Gazebo together with MoveIt/RViz with the gripper and the Intel RealSense D435 camera
 --> roslaunch trajectory_pkg spawn_ur5_gripper_cam.launch
 
-b) Posicionar o robô na posição inicial
+b) osition the robot in the initial position 
 --> rosrun trajectory_pkg pos_initial.py
 
-c) Inserir os obstáculos no Gazebo
+c) Insert obstacles into Gazebo
 --> rosrun trajectory_pkg spawn_spheres.py
 
-d) Remover obstáculos no Gazebo
+d) Remove obstacles from Gazebo
 --> rosrun trajectory_pkg remove_spheres_gazebo.py     
 
-e) Movimentar o robô entre duas posições utilizando o Rviz 
+e) Move the robot between two positions using RViz  
 --> rosrun trajectory_pkg analisador.py
 
-f) Planejamento de trajetória do robô com o algoritmo de "Campos Potenciais Artificiais Tradicional"
+f) Robot trajectory planning using the “Traditional Artificial Potential Fields” algorithm  "Campos Potenciais Artificiais Tradicional"
 --> rosrun trajectory_pkg cpa_basic.py
 
-g) Planejamento de trajetória do robô com o algoritmo de "Campos Potenciais Artificiais Tradicional"
+g) Robot trajectory planning using the “Traditional Artificial Potential Fields” algorithm "Campos Potenciais Artificiais Tradicional"
 --> rosrun trajectory_pkg cpa_basic2.py
 
-h) Planejamento de trajetória do robô com o algoritmo de "Campos Potenciais Artificiais Adaptativos"
+h) Robot trajectory planning using the “Adaptive Artificial Potential Fields” algorithm "Campos Potenciais Artificiais Adaptativos"
 --> rosrun trajectory_pkg cpa_basic3.py
 
-i) Verificar a posição do robô no espaço cartesiano
+i) Check the robot position in Cartesian space
 --> rosrun tf tf_echo /base_link /tool0
 
-j) Adicionar obstáculos no Moveit
+j) Add obstacles in MoveIt
 --> rosrun trajectory_pkg obstaculos.py
 
-l) Excluir obstáculos no Moveit
+l) Remove obstacles in MoveIt
 --> rosrun trajectory_pkg remove_spheres.py
 
 *************************************************************************************
